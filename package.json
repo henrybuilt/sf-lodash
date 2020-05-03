@@ -2,7 +2,7 @@
   "name": "@symbolic/lodash",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "nyc --reporter=html --reporter=text-summary mocha --require babel-core/register --require babel-polyfill \"./src/**/*test.js\" --require ./src/test",
     "build": "rollup -c",
