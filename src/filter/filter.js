@@ -1,5 +1,5 @@
-const _ = require('lodash');
+import _ from 'lodash';
 
-module.exports = function filter(collection, predicate) {
+export default function filter(collection, predicate) {
   return _.filter(collection, predicate || (value => !!value));
 }

@@ -1,4 +1,4 @@
-const filter = require('./filter');
+import filter from './filter';
 
 describe('_.filter()', () => {
   it('should filter out falsey values', () => {

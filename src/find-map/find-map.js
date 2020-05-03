@@ -1,6 +1,6 @@
-const _ = require('lodash');
+import _ from 'lodash';
 
-module.exports = function findMap(collection1, collection2, predicate) {
+export default function findMap(collection1, collection2, predicate) {
   return _.filter(_.map(collection1, (item1, i1) => {
     return _.find(collection2, (item2, i2) => {
       var _predicate = predicate;

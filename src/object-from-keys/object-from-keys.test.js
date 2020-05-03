@@ -1,4 +1,4 @@
-const objectFromKeys = require('./object-from-keys');
+import objectFromKeys from './object-from-keys';
 
 describe('_.objectFromKeys()', () => {
   it('should create a new object out of keys including key and index', () => {

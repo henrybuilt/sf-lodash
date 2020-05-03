@@ -1,4 +1,4 @@
-const _ = require('./index');
+import _ from './index';
 
 describe('_', () => {
   it('should include lodash functions', () => {

@@ -1,10 +1,10 @@
-const lodash = require('lodash');
+import lodash from 'lodash';
 
-const filter = require('./filter/filter');
-const findMap = require('./find-map/find-map');
-const objectFromKeys = require('./object-from-keys/object-from-keys');
+import filter from './filter/filter';
+import findMap from './find-map/find-map';
+import objectFromKeys from './object-from-keys/object-from-keys';
 
 //WARNING for some reason mocha + babel doesn't like spread syntax
 var _ = Object.assign({}, lodash, {filter, findMap, objectFromKeys});
 
-module.exports = _;
+export default _;

@@ -1,4 +1,4 @@
-const findMap = require('./find-map');
+import findMap from './find-map';
 
 describe('_.findMap()', () => {
   const c1 = [{id: 1, c: 1}, {id: 2, c: 1}, {id: 3, c: 1}];
