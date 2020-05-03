@@ -6,11 +6,13 @@
   "scripts": {
     "test": "nyc --reporter=html --reporter=text-summary mocha --require babel-core/register --require babel-polyfill \"./src/**/*test.js\" --require ./src/test",
     "build": "rollup -c",
-    "watch": "rollup -c -w"
+    "watch": "rollup -c -w",
+    "prepublishOnly": "npm run build && npm version patch && git push"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.9.6",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
@@ -20,6 +22,14 @@
     "chai": "^4.2.0",
     "mocha": "^7.1.2",
     "nyc": "^15.0.1",
-    "rollup": "^2.7.6"
+    "rollup": "1.26.3"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "engines": {
+    "node": "^10"
   }
 }

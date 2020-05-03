@@ -15,6 +15,7 @@ import _ from '@symbolic/lodash'
 1. create a new folder for the new function
 1. implement it following an existing pattern (including existing variable naming patterns)
 1. test it to 100% coverage with clean descriptions
+1. add it to index.js as an export
 1. document it in README.md
 
 ## functions
