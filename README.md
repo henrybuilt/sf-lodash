@@ -20,13 +20,6 @@ import _ from '@symbolic/lodash'
 
 ## functions
 
-#### `filter`
-filters out falsey values (not just false) by default
-
-```
-_.filter([{}, undefined]) -> [{}]
-```
-
 #### `findMap`
 
 map 1 array to another

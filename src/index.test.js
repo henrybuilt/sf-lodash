@@ -6,6 +6,6 @@ describe('_', () => {
   });
 
   it('should include @symbolic functions', () => {
-    expect(_.filter([1, 0])).to.deep.equal([1]);
+    expect(_.objectFromKeys(['a'], () => 1)).to.deep.equal({a: 1});
   });
 });
