@@ -30,6 +30,10 @@ map 1 array to another
 _.findMap(projects, users, ['projectManagerId', 'id']) -> [userForProject1, userForProject2, ...];
 ```
 
+#### `median`
+
+return the median for a given array
+
 #### `objectFromKeys`
 
  - creates an object out of an array of keys with a function predicate to generate values
