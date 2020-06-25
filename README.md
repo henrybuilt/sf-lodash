@@ -41,3 +41,11 @@ return the median for a given array
 ```
 _.objectFromKeys(['a', 'b', 'c'], (key, index) => index + 2) -> {a: 2, b: 3, c: 4}
 ```
+
+#### `labelForMoment`
+
+ - accepts a date as an argument and returns the difference between the date and now
+
+```
+_.labelForMoment(moment().add(15, 'minute')) -> '15m'
+```
