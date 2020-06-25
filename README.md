@@ -44,8 +44,10 @@ _.objectFromKeys(['a', 'b', 'c'], (key, index) => index + 2) -> {a: 2, b: 3, c: 
 
 #### `labelForMoment`
 
- - accepts a date as an argument and returns the difference between the date and now
+ - accepts a date as an argument and returns a label in a format according to the difference between the date and current time
 
 ```
-_.labelForMoment(moment().add(15, 'minute')) -> '15m'
+_.labelForMoment(<today at 10 am>) -> '10:00am'
+_.labelForMoment(<tomorrow at 10 am>) -> 'm/d 10:00am'
+_.labelForMoment(<lastYear at 10 am>) -> 'm/d/yy 10:00am'
 ```
