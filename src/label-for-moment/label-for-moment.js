@@ -1,26 +1,17 @@
 import _ from 'lodash';
+import moment from 'moment';
 
-export default function labelForMoment(date) {
-  var date = new Date(date);
-  var now = new Date();
-  var timeLabel = '';
-  var timeDifference = _.round(Math.abs((now - date)) / 1000, 0); // returns the difference in milliseconds
-  var secondsInOneMinute = 60; // number of seconds in one min
-  var secondsInOneDay = 60 * 60 * 24; // min in one hour * number of seconds in one min * number of hours in a day
-  var secondsInOneHour = 60 * 60; // min in one hour * number of seconds in one min
+export default function labelForMoment(momentInstance) {
+  var format = 'M/D/YY LT'; //standard long form - m/d/y 00:00am
+  var timeDifference = _.round(Math.abs(momentInstance.diff(moment()) / 1000), 0);
+  var secondsInOneDay = 60 * 60 * 24; // number of min in one hour * number of seconds in one min * number of hours in a day
 
-  if (timeDifference < secondsInOneHour) {
-    timeLabel = _.toString(timeDifference / secondsInOneMinute) + 'm'; // < 60 min
+  if (timeDifference < secondsInOneDay) {
+    format = 'LT'; // today - 00:00am
   }
-  else if (timeDifference < secondsInOneDay && timeDifference >= secondsInOneHour) {
-    timeLabel = _.toString(_.round(timeDifference / secondsInOneHour, 0)) + 'h'; // < 24 hour
-  }
-  else if (timeDifference >= secondsInOneDay && date.getFullYear() === now.getFullYear()) {
-    timeLabel = date.getMonth() + '/' + date.getDay(); // > 24 hour and same year
-  }
-  else {
-    timeLabel = date.getMonth() + '/' + date.getDay() + '/' + date.getFullYear(); // > 24 hour and different year
+  else if (moment().year() === momentInstance.year()) {
+    format = 'M/D LT'; // this year - m/d 00:00am
   }
 
-  return timeLabel;
+  return momentInstance.format(format);
 }
