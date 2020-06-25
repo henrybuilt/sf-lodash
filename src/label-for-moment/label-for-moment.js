@@ -4,7 +4,7 @@ import moment from 'moment';
 export default function labelForMoment(momentInstance) {
   var format = 'M/D/YY LT'; //standard long form - m/d/y 00:00am
   var timeDifference = _.round(Math.abs(momentInstance.diff(moment()) / 1000), 0);
-  var secondsInOneDay = 60 * 60 * 24; // number of min in one hour * number of seconds in one min * number of hours in a day
+  var secondsInOneDay = 60 * 60 * 24;
 
   if (timeDifference < secondsInOneDay) {
     format = 'LT'; // today - 00:00am
