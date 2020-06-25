@@ -5,7 +5,6 @@ export default function labelForMoment(date) {
   var now = new Date();
   var timeLabel = '';
   var timeDifference = _.round(Math.abs((now - date)) / 1000, 0); // returns the difference in milliseconds
-  var maxSecondsInOneHour = 60 * 59; // unit * min in one hour * number of seconds in one min
   var secondsInOneMinute = 60; // unit * number of seconds in one min
   var secondsInOneDay = 60 * 60 * 24; // unit * min in one hour * number of seconds in one min * number of hours in a day
   var secondsInOneHour = 60 * 60; // unit * min in one hour * number of seconds in one min
