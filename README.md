@@ -48,6 +48,6 @@ _.objectFromKeys(['a', 'b', 'c'], (key, index) => index + 2) -> {a: 2, b: 3, c: 
 
 ```
 _.labelForMoment(<today at 10 am>) -> '10:00am'
-_.labelForMoment(<tomorrow at 10 am>) -> 'm/d 10:00am'
+_.labelForMoment(<yesterday at 10 am>) -> 'm/d 10:00am'
 _.labelForMoment(<lastYear at 10 am>) -> 'm/d/yy 10:00am'
 ```
