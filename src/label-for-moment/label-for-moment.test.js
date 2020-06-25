@@ -5,10 +5,12 @@ import _ from 'lodash';
 describe('_.labelForMoment()', () => {
   it('should return in minute if the difference time is less than 1 hour', () => {
     expect(labelForMoment(moment().add(15, 'minute'))).to.equal('15m');
+    expect(labelForMoment(moment().add(59, 'minute'))).to.equal('59m');
   });
 
-  it('should return in hour if the difference time is less than 1 day', () => {
+  it('should return in hour format if the difference time is less than 1 day', () => {
     expect(labelForMoment(moment().add(1, 'hour'))).to.equal('1h');
+    expect(labelForMoment(moment().add(60, 'minute'))).to.equal('1h');
   });
 
   it('should return in m/d format if the difference time is less than more than 1 day and in the same year', () => {
