@@ -14,5 +14,5 @@ export default function labelForMoment(date) {
     format = 'M/D HH:mm a'; // this year - m/d 00:00am
   }
 
-  return momentInstance.format(format).toString();
+  return momentInstance.format(format);
 }
