@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import moment from 'moment';
 
 export default function labelForMoment(momentInstance) {
   var format = 'M/D/YY h:mma'; //standard long form - m/d/y 00:00am
