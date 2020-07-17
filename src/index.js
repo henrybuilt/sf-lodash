@@ -1,6 +1,6 @@
 import lodash from 'lodash';
 
-import arrayMove from './find-map/find-map';
+import arrayMove from './array-move/array-move';
 import findMap from './find-map/find-map';
 import labelForMoment from './label-for-moment/label-for-moment';
 import median from './median/median';

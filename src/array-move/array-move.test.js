@@ -1,5 +1,4 @@
 import arrayMove from './array-move';
-import { expect } from 'chai';
 
 describe('_.arrayMove()', () => {
   it('should reorder array', () => {
