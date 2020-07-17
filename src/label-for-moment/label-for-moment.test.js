@@ -28,7 +28,7 @@ describe('_.labelForMoment()', () => {
   });
 
   it('should return in m/d 00:00am format if the moment is in this year but not today', () => {
-    var momentInstance = moment(`04/26/${moment().year()}`).hour(9).minute(0);
+    var momentInstance = moment(new Date(`04/26/${moment().year()}`)).hour(9).minute(0);
 
     expect(labelForMoment(momentInstance)).to.equal('4/26 9:00am');
 
@@ -42,7 +42,7 @@ describe('_.labelForMoment()', () => {
   });
 
   it('should return in m/d/yy 00:00am format if the moment is in another year', () => {
-    var momentInstance = moment('04/26/1995').hour(9).minute(0);
+    var momentInstance = moment(new Date('04/26/1995')).hour(9).minute(0);
 
     expect(labelForMoment(momentInstance)).to.equal('4/26/95 9:00am');
   });
