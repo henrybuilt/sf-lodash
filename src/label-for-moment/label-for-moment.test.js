@@ -46,4 +46,18 @@ describe('_.labelForMoment()', () => {
 
     expect(labelForMoment(momentInstance)).to.equal('4/26/95 9:00am');
   });
+
+  it('should return correct formats for short', () => {
+    var momentInstance = moment().hour(10).minute(0);
+
+    expect(labelForMoment(momentInstance, {short: true})).to.equal('10:00am');
+
+    var momentInstance = moment(new Date(`04/27/${moment().year()}`)).hour(9).minute(0);
+
+    expect(labelForMoment(momentInstance, {short: true})).to.equal('4/27');
+
+    var momentInstance = moment(new Date('04/26/1995')).hour(9).minute(0);
+
+    expect(labelForMoment(momentInstance, {short: true})).to.equal('4/26/95');
+  });
 });
