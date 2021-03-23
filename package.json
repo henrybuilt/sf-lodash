@@ -29,8 +29,5 @@
     "presets": [
       "env"
     ]
-  },
-  "engines": {
-    "node": "^10"
   }
 }
